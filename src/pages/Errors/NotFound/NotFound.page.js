@@ -14,7 +14,8 @@ const NotFound = () => {
         The page you are trying to access does not exist or has been<br></br>{" "}
         moved.
         <br />
-        Try going back to our homepage.
+        Try going back to our homepage.<br/>
+       new{ process.env.REACT_APP_BASE_URL}
       </p>
 
       <button
