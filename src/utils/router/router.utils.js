@@ -4,9 +4,8 @@ import { AuthLayout, LandingLayout, DashboardLayout } from "layouts";
 import { PreferanceDuCompte, Parametre } from "components";
 export default createBrowserRouter([
   {
-    path: "/landing",
+    path: "/",
     element: <LandingLayout />,
-    loader: async (param) => {},
     errorElement: (
       <div style={{ height: "100vh" }}>
         <error.NotFound />
