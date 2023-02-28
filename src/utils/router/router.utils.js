@@ -12,7 +12,7 @@ export default createBrowserRouter([
         <error.NotFound />
       </div>
     ),
-    children: [{ path: "/", element: <landing.Accueil /> }],
+    children: [{ index: true, element: <landing.Accueil /> }],
   },
   {
     path: "/404",
