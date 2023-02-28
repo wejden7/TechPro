@@ -4,7 +4,7 @@ import { AuthLayout, LandingLayout, DashboardLayout } from "layouts";
 import { PreferanceDuCompte, Parametre } from "components";
 export default createBrowserRouter([
   {
-    path: "/",
+    path: "/landing",
     element: <LandingLayout />,
     loader: async (param) => {},
     errorElement: (
