@@ -1,0 +1,14 @@
+.btn_delete {
+    display: grid;
+    place-items: center;
+    background-color: rgba(155, 37, 47, 0.5);
+    &:hover {
+      background-color: rgba(155, 37, 47);
+    }
+    &.not_hidden::after {
+      content: "\f2ed";
+      font-family: "Font Awesome 5 Free";
+      padding: 0px 6px;
+      font-weight: 400;
+    }
+  }

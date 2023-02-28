@@ -1,0 +1,58 @@
+@import "utils/styles/colors";
+.update-postes {
+  width: 90vw;
+  height: 90vh;
+  padding: 20px !important;
+  .form-group-update-post {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    gap: 20px;
+    .text-input {
+      width: 250px !important;
+    }
+    .btn-group-update-postes {
+      display: flex;
+      gap: 8px;
+      .btn {
+        padding: 4px 8px;
+        border-radius: 5px;
+        color: white;
+        &.btn-close-update-postes {
+          background-color: $color-error;
+        }
+        &.btn-save-update-postes {
+          background-color: $color-light;
+        }
+        &.btn-delete-update-postes {
+          border: 1px solid $color-error;
+          color: $color-error;
+          position: absolute;
+          right: 20px;
+        }
+      }
+    }
+    .liste-permission {
+      flex: auto;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-rows: repeat(auto-fill, 40px);
+      gap: 8px;
+      .checkbox-liste-permission {
+        display: flex;
+
+        align-items: center;
+        width: 250px;
+
+        label {
+          width: 235px !important;
+          text-transform: capitalize;
+        }
+        input[type="checkbox"] {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+  }
+}

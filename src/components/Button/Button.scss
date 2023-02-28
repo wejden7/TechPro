@@ -1,0 +1,9 @@
+@import "utils/styles/colors.scss";
+.btn-submit{
+    background: $color-light-opacity;
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+  }

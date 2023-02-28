@@ -1,0 +1,15 @@
+@import "utils/styles/colors.scss";
+.drawer {
+  &.dark {
+   
+    .MuiDrawer-paper {
+      color: white;
+      background: $color-blue;
+    }
+  }
+
+  .drawer-content {
+    width: 300px;
+    padding: 8px;
+  }
+}

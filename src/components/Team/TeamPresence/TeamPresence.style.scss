@@ -1,0 +1,13 @@
+@import "utils/styles/colors";
+.presence-team {
+  flex: 1;
+
+  .guide-color {
+    color: white;
+    bottom: 40px;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    @extend color-guide;
+  }
+}

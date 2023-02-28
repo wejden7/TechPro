@@ -1,0 +1,16 @@
+@import "utils/styles/colors";
+
+.btn-update-team {
+  font-size: 14px;
+  padding: 2px 0;
+}
+
+.code-login {
+  border-radius: 5px;
+  border: 1px solid $color-gray;
+  font-size: 12px;
+  .span-text-code {
+    margin-left: 8px;
+    color: $color-gray;
+  }
+}

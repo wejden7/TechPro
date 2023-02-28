@@ -1,0 +1,11 @@
+@import "utils/styles/colors";
+.content-dashboard-Team {
+  display: flex;
+  gap: 8px;
+}
+@media screen and (max-width: 1000px) {
+  .content-dashboard-Team {
+    display: grid;
+    gap: 8px;
+  }
+}

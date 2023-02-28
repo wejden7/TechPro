@@ -1,0 +1,59 @@
+.btn-sideBar-default {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: calc(100% - 6px);
+  margin: 0 3px;
+  padding: 8px 0;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: $color-light;
+  &.active {
+    background-color: $color-gray;
+    color: $color-blue;
+  }
+  &:hover {
+    background-color: $color-gray;
+    color: $color-blue;
+  }
+  span {
+    position: absolute;
+    font-size: 24px;
+    margin-left: 15px;
+  }
+  .label-link {
+    margin-left: 60px;
+    font-size: 14px;
+    white-space: nowrap;
+    font-weight: 400;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+}
+.dashboard.side-bar-open .btn-sideBar-default {
+  .label-link {
+    opacity: 1;
+  }
+}
+
+.btn {
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-operation {
+  padding: 3px 15px;
+  border-radius: 50px;
+  transition: background-color 0.5s ease-in-out;
+}
+.btn-action {
+  color: white;
+  height: 32px;
+  width: 32px;
+  transition: background-color 0.5s ease-in-out;
+  border-radius: 5px;
+}

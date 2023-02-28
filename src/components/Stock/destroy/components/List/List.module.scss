@@ -1,0 +1,11 @@
+@import "utils/styles/colors";
+.list {
+  height: 99%;
+  overflow: hidden;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+

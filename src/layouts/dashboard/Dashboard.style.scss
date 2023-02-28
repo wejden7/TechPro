@@ -1,0 +1,79 @@
+@import "utils/styles/colors";
+.dashboard {
+  min-height: 100%;
+  min-height: 100vh;
+  background-color: whitesmoke;
+  transition-property: color, background-color;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+  color: #000;
+  .nav-bar-dashboard {
+    background: white;
+    box-shadow: 0px 4px 8px -5px $color-gray;
+    margin-left: 60px;
+    z-index: 10;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  .dashboard-side-bar {
+    background-color: white;
+    box-shadow: 4px 60px 8px -5px $color-gray;
+    width: 60px;
+    height: 100vh;
+    z-index: 20;
+    position: fixed;
+    border-right: 1px solid $color-gray;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  .content-dashboard {
+    margin-left: 85px;
+    margin-right: 25px;
+    margin-top: 15px;
+    transition: all 0.5s ease-in-out;
+  }
+  .btn-setting {
+    &::after {
+      content: "\f013";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 600;
+      font-size: 25px;
+      padding: 5px 10px;
+      position: fixed;
+      bottom: 35px;
+      right: 35px;
+      border-radius: 50%;
+      color: #fff;
+      background-color: $color-blue;
+      box-shadow: 0px 0px 10px $color-blue;
+    }
+  }
+
+  &.dark {
+    background: linear-gradient($color-blue, black);
+    color: #fff;
+    .nav-bar-dashboard {
+      background: $color-blue;
+      box-shadow: 0px 4px 8px -5px black;
+    }
+    .dashboard-side-bar {
+      background: $color-blue;
+      box-shadow: 4px 0px 8px -5px black;
+      border-right: 1px solid black;
+    }
+  }
+  &.side-bar-open {
+    .nav-bar-dashboard {
+      margin-left: 250px;
+    }
+
+    .dashboard-side-bar {
+      width: 250px;
+    }
+    .content-dashboard {
+      margin-left: 265px;
+    }
+  }
+}

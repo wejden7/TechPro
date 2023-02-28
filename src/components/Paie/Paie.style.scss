@@ -1,0 +1,89 @@
+@import "utils/styles/colors";
+
+.btn-paie {
+  padding: 0px 8px;
+  color: $color-primary;
+  border-radius: 5px;
+
+  &::after {
+    content: "\f15b";
+    font-family: "Font Awesome 5 Free";
+    font-size: 18px;
+    font-weight: 900;
+  }
+}
+.paie {
+  width: 90vw;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+  
+  .form-paie {
+    width: 300px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    .paie-section {
+      .titel-section-paie {
+        font-size: 20px;
+        font-weight: 900;
+        width: 100%;
+        border-bottom: 1px solid $color-light-opacity;
+        padding-bottom: 4px;
+      }
+      .liste-grid {
+        padding-top: 8px;
+        flex: auto;
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-template-rows: repeat(auto-fill, 40px);
+
+        gap: 8px;
+        .checkbox-liste-grid {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          label {
+            text-transform: capitalize;
+            white-space: nowrap;
+          }
+          input[type="checkbox"] {
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
+    }
+    .btn-list {
+      position:absolute;
+      bottom: 7px;
+      gap: 8px;
+      width: calc(100% - 16px);
+      display: grid;
+      //height: 88px;
+
+      .btn-submit-paie {
+        height: 40px;
+        padding: 8px 0;
+        background: $color-light-opacity;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+.dashboard.dark {
+  .btn-paie {
+    color: whitesmoke;
+
+    &:hover {
+      background-color: $color-light-opacity;
+    }
+  }
+}

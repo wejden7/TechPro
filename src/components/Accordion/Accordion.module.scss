@@ -1,0 +1,32 @@
+@import "utils/styles/colors";
+
+.accordion {
+  background: $color-light-opacity;
+  &:nth-child(n):not(:last-child) {
+    border: 1px solid $color-light-opacity;
+  }
+  .summary {
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+    padding: 20px 10px;
+    background: $color-light-opacity;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .details {
+    overflow: hidden;
+    height: auto;
+
+    &.open {
+      max-height: 500px;
+      transition: max-height 1s ease-in-out;
+    }
+    &.close {
+      max-height: 0;
+      transition: max-height 0.5s ease-in-out;
+    }
+  }
+}

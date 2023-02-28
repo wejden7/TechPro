@@ -1,0 +1,23 @@
+@import "utils/styles/colors";
+.list_Merchandise {
+  width: 75%;
+  .item {
+    padding: 8px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 0.5fr;
+    font-size: 14px;
+    text-align: left;
+    text-transform: capitalize;
+    &:nth-child(even) {
+      background: $color-light-opacity;
+    }
+  }
+}
+
+.btnout {
+  background-color: rgb(250, 67, 235, 0.5);
+  &:hover {
+    background-color: rgb(250, 67, 235);
+  }
+}

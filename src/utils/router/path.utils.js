@@ -1,0 +1,10 @@
+export const registerPath = "/user/register";
+export const loginPath = "/user/login";
+export const ForgetPasswordPath = "/user/forget-password";
+export const VerificationCodePAth = "/user/verification-code";
+export const UpdatePasswordPath = "/user/update-password";
+export const Error404Path = "/404";
+export const DashboardPAth = "/dashboard";
+export const DashboardTeamPAth = "/dashboard/team";
+export const DashboardSettingPath = "/dashboard/setting";
+export const DashboardStockPath = "/dashboard/stock";

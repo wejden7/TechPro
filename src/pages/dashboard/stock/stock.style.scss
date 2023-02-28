@@ -1,0 +1,29 @@
+@import "utils/styles/colors";
+.content-dashboard-stock {
+ 
+  height: calc(100vh - 100px);
+  display: grid;
+  place-items: center;
+  .succeeded{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    
+  }
+}
+.dashboard.dark .content-dashboard-stock {
+ 
+}
+
+.error {
+  img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+  }
+  p {
+    text-align: center;
+  }
+}

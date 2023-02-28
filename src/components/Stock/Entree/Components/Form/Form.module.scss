@@ -1,0 +1,83 @@
+@import "utils/styles/colors";
+.form {
+  padding: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 0.5fr;
+  gap: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .form {
+    grid-template-columns: 1fr ;
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  width: 100%;
+  cursor: pointer;
+  input {
+    display: none;
+  }
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $color-gray;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 5px;
+
+  &:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: calc(50% - 16px);
+    left: 8px;
+
+    bottom: 5px;
+    background-color: $color-light;
+    border: 1px solid;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 5px;
+  }
+}
+
+input:checked + .slider:before {
+  left: 24px;
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(100%);
+}
+
+/*------ ADDED CSS ---------*/
+
+.select {
+  color: $color-primary;
+  font-weight: 400;
+
+  position: absolute;
+  height: 100%;
+
+  font-size: 10px;
+  font-family: Verdana, sans-serif;
+}
+.one {
+  width: calc(50% - 8px);
+  display: grid;
+  place-items: center;
+}
+.tow {
+  right: 0;
+  width: calc(50% - 8px);
+  display: grid;
+  place-items: center;
+}

@@ -1,0 +1,40 @@
+@import "utils/styles/colors";
+.notFound {
+  text-align: center;
+  gap: 10px;
+  border: 1px solid;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+  }
+  .titel {
+    font-size: 25px;
+    font-weight: 900;
+  }
+  .text {
+    font-size: 16px;
+    font-weight: 200;
+  }
+  .btn {
+    margin-top: 20px;
+
+    padding: 0px 30px;
+    height: 50px;
+    border-radius: 5px;
+    font-weight: 700;
+
+    transition: all 0.31s;
+    background-color: $color-light-opacity;
+    color: $color-blue;
+    &:hover {
+      background-color: $color-blue;
+      color: #fff;
+    }
+  }
+}

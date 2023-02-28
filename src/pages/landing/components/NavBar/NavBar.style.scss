@@ -1,0 +1,72 @@
+@import "utils/styles/colors";
+.nav-bar {
+  display: flex;
+
+  padding: 15px 40px;
+  position: sticky;
+  z-index: 2;
+  background: white;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+    position: relative;
+    color: transparent;
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $color-blue;
+    &::before {
+      content: attr(data-text);
+      position: absolute;
+      color: $color-blue;
+      width: 0;
+      overflow: hidden;
+      transition: 1s;
+      border: 0px solid $color-blue;
+      -webkit-text-stroke: 1px $color-blue;
+    }
+    &:hover::before {
+      width: 100%;
+    }
+  }
+  .nav-auth {
+    display: flex;
+    gap: 30px;
+ 
+    
+    }
+    .button-in {
+      font-size: 16px;
+      font-weight: 500;
+      padding: 8px 20px;
+      border-radius: 20px;
+      transition: all;
+      transition-duration: 0.3s;
+      background-color: white;
+      color: $color-blue;
+      border: $color-blue 2px solid;
+      &:hover {
+        border-color: white;
+        background-color: $color-blue;
+        color: white;
+      }
+    }
+    .button-up {
+      font-size: 16px;
+      font-weight: 500;
+      padding: 8px 20px;
+      border-radius: 20px;
+      transition: all;
+      transition-duration: 0.3s;
+      background-color: $color-blue;
+      color: white;
+
+      &:hover {
+        background-color: $color-light-opacity;
+      }
+    }
+  }
+ 
+

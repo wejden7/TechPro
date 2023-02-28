@@ -1,0 +1,18 @@
+.form {
+  padding: 20px 40px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 300px;
+}
+.btnUpdate {
+  background-color: rgba(37, 155, 43, 0.5);
+  &:hover {
+    background-color: rgba(37, 155, 43);
+  }
+  &::after {
+    content: "\f044";
+    font-family: "Font Awesome 5 Free";
+    padding: 0px 6px;
+    font-weight: 400;
+  }
+}

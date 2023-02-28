@@ -1,0 +1,27 @@
+@import "utils/styles/colors";
+.items {
+  & > :nth-child(n):not(:last-child) {
+    border-bottom: 1px solid $color-light-opacity;
+  }
+  .item {
+   &> :nth-child(n):not(:last-child) {
+      border-right: 1px solid $color-light-opacity;
+    }
+    .action {
+      display: flex;
+      justify-content: space-around;
+      :first-child{
+        flex: 1;
+        border-right: 1px solid $color-light-opacity;
+      }
+      :last-child{
+        flex: 1;
+      }
+    }
+    padding: 10px 0;
+    text-align: center;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(var(--count), 1fr);
+  }
+}
