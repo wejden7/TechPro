@@ -8,3 +8,4 @@ export const DashboardPAth = "/dashboard";
 export const DashboardTeamPAth = "/dashboard/team";
 export const DashboardSettingPath = "/dashboard/setting";
 export const DashboardStockPath = "/dashboard/stock";
+export const DashboardPreparation = "/Dashboard/preparation";

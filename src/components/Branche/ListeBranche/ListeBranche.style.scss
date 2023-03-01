@@ -1,70 +1,71 @@
 @import "utils/styles/colors";
 .liste-branche {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 8px;
   flex-wrap: wrap;
+  .update {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
   .item-branche {
     background-color: $color-light-opacity;
-    height: max-content;
     padding: 4px 8px;
     border-radius: 5px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     gap: 8px;
-    place-items: center;
-    .titel {
-      font-size: 14px;
-      width: 200px;
-    }
-    ul {
+    justify-content:flex-start;
+    .header {
       display: flex;
-      flex: auto;
-      flex-wrap: wrap;
-      gap: 8px;
-      .btn-ul {
-        font-size: 14px;
-        background: $color-light-opacity;
-        padding: 2px 8px;
-        border-radius: 5px;
-      }
-      .ferme {
-        background: red;
-        color: white;
-      }
-    }
-    .btn-item-branche {
-      font-size: 14px;
+      justify-content: space-between;
+      place-items: center;
+      height: 40px;
       border-bottom: 1px solid $color-light-opacity;
 
+      .titel {
+        font-size: 14px;
+      }
+    }
+
+    .zone_point {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+      .zone {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 8px;
+        &:first-child {
+          border-right: 1px solid;
+        }
+        .btn-ul {
+          font-size: 14px;
+          background: $color-light-opacity;
+          padding: 4px 16px;
+          height: max-content;
+        }
+        .ferme {
+          background: red;
+          color: white;
+        }
+      }
+    }
+
+    .btn-item-branche {
+      font-size: 14px;
       &.delete {
-        color: red;
+        color: rgba(184, 104, 104, 0.5);
         &:hover {
-          border-bottom: 1px solid rgb(201, 0, 0);
+          color: rgb(184, 104, 104, 1);
         }
       }
       &.update {
-        color: rgb(0, 162, 0);
+        color: rgb(0, 162, 0, 0.5);
         &:hover {
-          border-bottom: 1px solid rgb(0, 162, 0);
+          color: rgb(0, 162, 0, 1);
         }
-      }
-    }
-  }
-}
-
-.dashboard.dark {
-  .btn-item-branche {
-    &.delete {
-      color: $color-error;
-      &:hover {
-        border-bottom: 1px solid $color-error;
-      }
-    }
-    &.update {
-      color: rgb(60, 223, 60);
-      &:hover {
-        border-bottom: 1px solid rgb(68, 223, 60);
       }
     }
   }

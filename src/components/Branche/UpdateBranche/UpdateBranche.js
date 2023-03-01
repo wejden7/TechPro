@@ -7,7 +7,7 @@ import FormInput from "../Components/FomrInput/FormInput";
 import "./UpdateBranche.style.scss";
 function UpdateBranche({ id, annuler }) {
   const branche = useSelector((state) => getBrancheById(state, id));
-  const { onSubmit, isSubmitting, success, ajouterZone, ...other } = useBranche(
+  const { onSubmit, isSubmitting, success, ...other } = useBranche(
     branche,
     true
   );
@@ -19,7 +19,7 @@ function UpdateBranche({ id, annuler }) {
     <div className="update-branche">
       <form onSubmit={onSubmit} className="form-group">
         <FormInput useForm={other} />
-        <button type="button" className="btn-icon" onClick={ajouterZone} />
+      
         <div className="btn">
           <button type="submit" className="btn-save">
             {!isSubmitting ? "save" : <BarLoader color="#fefbd8" width={30} />}

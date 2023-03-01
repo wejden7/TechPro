@@ -15,7 +15,11 @@ export default createBrowserRouter([
   },
   {
     path: "/404",
-    element: <error.NotFound />,
+    element: (
+      <div style={{ height: "100vh" }}>
+        <error.NotFound />
+      </div>
+    ),
   },
   {
     path: "/dashboard",
@@ -29,6 +33,10 @@ export default createBrowserRouter([
       {
         path: "team",
         element: <dashboard.Team />,
+      },
+      {
+        path: "preparation",
+        element: <dashboard.Preparation />,
       },
       {
         path: "setting",

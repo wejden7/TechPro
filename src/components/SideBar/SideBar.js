@@ -4,6 +4,7 @@ import {
   AiOutlineHome,
   AiOutlineStock,
   AiOutlineUser,
+  AiTwotoneAppstore
 } from "react-icons/ai";
 import { FiActivity } from "react-icons/fi";
 import { MdRestaurantMenu } from "react-icons/md";
@@ -12,6 +13,7 @@ import {
   DashboardTeamPAth,
   DashboardPAth,
   DashboardStockPath,
+  DashboardPreparation,
 } from "utils/router/path.utils";
 
 import "./SideBar.style.scss";
@@ -42,6 +44,11 @@ function SideBar() {
       <div className="dashboard-side-bar-links">
         <BtnLink to={DashboardPAth} name="Dashbord" icon={<AiOutlineHome />} />
         <BtnLink to={DashboardTeamPAth} name="Team" icon={<AiOutlineUser />} />
+        <BtnLink
+          to={DashboardPreparation}
+          name="Preparation"
+          icon={<AiTwotoneAppstore/>}
+        />
         <BtnLink
           to={DashboardStockPath}
           name="Stock"

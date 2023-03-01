@@ -1,6 +1,6 @@
 @import "utils/styles/colors";
 
-.dashboardHeight{
+.dashboardHeight {
   height: calc(100vh - 100px);
 }
 .container {
@@ -73,6 +73,11 @@
 .center {
   display: grid;
   height: 100%;
+  justify-content: center;
+  place-items: center;
+}
+.boxcenter {
+  display: flex;
   justify-content: center;
   place-items: center;
 }

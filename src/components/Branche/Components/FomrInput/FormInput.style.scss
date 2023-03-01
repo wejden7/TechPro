@@ -1,4 +1,10 @@
+.input-list{
+  display: grid;
+  gap: 8px;
+ 
+}
 .input-zone {
+ 
   position: relative;
   & > span {
     position: absolute;
@@ -9,6 +15,7 @@
       font-family: "Font awesome 5 Free";
       font-weight: 600;
       color: red;
+      cursor: pointer;
     }
   }
 }

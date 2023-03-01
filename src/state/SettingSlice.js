@@ -5,6 +5,7 @@ import {
   deleteBrancheApi,
   updateBrancheApi,
   openCloseZoneBrancheApi,
+  openClosePointBrancheApi,
 } from "utils/apis/branche.api";
 
 import {
@@ -34,6 +35,10 @@ export const openCloseZoneBranche = createAsyncThunk(
   "setting/openCloseZoneBranche",
   (id, thunkAPI) => openCloseZoneBrancheApi(id)
 );
+export const openClosePointBranche = createAsyncThunk(
+  "setting/openClosePointBranche",
+  (id, thunkAPI) => openClosePointBrancheApi(id)
+);
 export const findPoste = createAsyncThunk("setting/findPoste", (_, thunkAPI) =>
   findPosteApi()
 );
@@ -61,39 +66,72 @@ const SettingSlice = createSlice({
   extraReducers(builder) {
     builder
       .addCase(ajouterBranche.fulfilled, (state, action) => {
-        //  console.log("login successful");
-        // console.log(action.payload.data);
+        console.log("login successful");
+        console.log(action.payload.data);
         state.branches.push(action.payload.data);
       })
       .addCase(findBranche.fulfilled, (state, action) => {
-        // console.log("find Branche successful");
-        // console.log(action.payload.data);
+        console.log("find Branche successful");
+        console.log(action.payload.data);
         state.branches = action.payload.data;
       })
       .addCase(deleteBranche.fulfilled, (state, action) => {
-        //  console.log("delete Branche successful");
-        //  console.log(action.payload);
+        console.log("delete Branche successful");
+        console.log(action.payload);
         state.branches = state.branches.filter(
           (branche) => branche._id !== action.payload
         );
       })
       .addCase(updateBranche.fulfilled, (state, action) => {
-        // console.log("delete Branche successful");
-        // console.log(action.payload);
+        console.log("delete Branche successful");
+        console.log(action.payload);
         state.branches = state.branches.map((item) => {
           if (item._id === action.payload.data._id) return action.payload.data;
           return item;
         });
       })
       .addCase(openCloseZoneBranche.fulfilled, (state, action) => {
-        //  console.log("delete Branche successful");
-        //  console.log(action.payload);
-        state.branches = state.branches.map((item) => {
-          if (item._id === action.payload.data._id) return action.payload.data;
+        console.log("openCloseZoneBranche Branche successful");
+        console.log(action.payload);
+        state.branches = state.branches.map((item, index) => {
+          const zone = item.zones.find(({ _id }) => _id === action.payload);
+          if (zone) {
+            const zones = item.zones.map((p) => {
+              if (p._id === action.payload) {
+                return { ...p, ferme: !p.ferme };
+              }
+              return p;
+            });
+            return {
+              ...item,
+              zones,
+            };
+          }
           return item;
         });
       })
-     
+      .addCase(openClosePointBranche.fulfilled, (state, action) => {
+        console.log("delete Branche successful");
+
+        state.branches = state.branches.map((item, index) => {
+          const point = item.pointPreparation.find(
+            ({ _id }) => _id === action.payload
+          );
+          if (point) {
+            const points = item.pointPreparation.map((p) => {
+              if (p._id === action.payload) {
+                return { ...p, ferme: !p.ferme };
+              }
+              return p;
+            });
+            return {
+              ...item,
+              pointPreparation: points,
+            };
+          }
+          return item;
+        });
+      })
       .addCase(findPoste.fulfilled, (state, action) => {
         //console.log("find post successful");
         //console.log(action.payload.data);

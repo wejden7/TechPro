@@ -64,12 +64,27 @@ export async function openCloseZoneBrancheApi(id) {
   const headers = {
     "Access-Control-Allow-Origin": "*",
     "Content-Type": "Application/json",
-    'Authorization': `Bearer ${token}`,
+    Authorization: `Bearer ${token}`,
   };
   return new Promise((resolve, reject) => {
     api
-      .put("/api/zone/" + id, {},{ headers })
-      .then((result) => resolve(result.data))
+      .put("/api/zone/" + id, {}, { headers })
+      .then((result) => resolve(id))
+      .catch((error) => reject(error.response.data.errors));
+  });
+}
+
+export async function openClosePointBrancheApi(id) {
+  const token = localStorage.getItem("user-restauration-token");
+  const headers = {
+    "Access-Control-Allow-Origin": "*",
+    "Content-Type": "Application/json",
+    Authorization: `Bearer ${token}`,
+  };
+  return new Promise((resolve, reject) => {
+    api
+      .put("/api/pointPreparation/" + id, {}, { headers })
+      .then((result) => resolve(id))
       .catch((error) => reject(error.response.data.errors));
   });
 }

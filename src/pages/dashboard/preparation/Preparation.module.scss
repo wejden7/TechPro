@@ -1,0 +1,40 @@
+@import "utils/styles/colors";
+.order {
+  flex: 1;
+}
+.preparation {
+  display: flex;
+  gap: 8px;
+}
+.choixs {
+  display: flex;
+  gap: 50px;
+  .choix {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    background-color: $color-light-opacity;
+    transition: background-color 0.5s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background-color: $color-light;
+      color: $color-gray;
+    }
+    & > i {
+      font-size: 40px;
+    }
+  }
+}
+.menu {
+  flex: 1;
+  .btn2 {
+    background: $color-light-opacity;
+    padding: 4px 8px;
+    border-radius: 5px;
+  }
+}
